@@ -15,7 +15,8 @@ pipeline{
       stage("deploy-dev"){
        steps{
          sh"""
-          scp -i /home/Jenkins/Jenkins_key_pair.pem -r /home/Jenkins/remoting.jar ubuntu@44.202.148.250:/home/ubuntu/Tomcat
+          ls /home/Jenkins/
+          #scp -i /home/Jenkins/Jenkins_key_pair.pem -r /home/Jenkins/remoting.jar ubuntu@44.202.148.250:/home/ubuntu/Tomcat
           """
           }
         }
