@@ -12,6 +12,5 @@ pipeline{
             echo "mv target/*.war target/myweb.war"
              }
             }
-        }
       }
     }
