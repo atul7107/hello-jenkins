@@ -18,7 +18,9 @@ pipeline{
        steps{
          sh"""
           ls /tmp/
-          scp -i /home/Jenkins/.ssh/Jenkins_key_pair.pem -r /tmp/remoting.jar ubuntu@44.202.148.250:/home/ubuntu/Tomcat
+          #scp -i /home/Jenkins/.ssh/Jenkins_key_pair.pem -r /tmp/remoting.jar ubuntu@44.202.148.250:/home/ubuntu/Tomcat
+          scp -r /tmp/remoting.jar ubuntu@44.202.148.250:/home/ubuntu/Tomcat
+          """
           """
           }
         }
