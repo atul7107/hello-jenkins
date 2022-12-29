@@ -12,5 +12,10 @@ pipeline{
             echo "mv target/*.war target/myweb.war"
              }
             }
+      stage("deploy-dev"){
+       steps{
+          scp -i /home/Jenkins/Jenkins_key_pair.pem -r remoting.jar ubuntu@44.202.148.250:/home/ubuntu/Tomcat
+          }
+        }
       }
     }
