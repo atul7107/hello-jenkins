@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage("Git Checkout"){
       steps{
-            git Github_tokens: 'github', url: 'https://github.com/atul7107/hello-jenkins.git'
+            git credentialsId: "Github_tokens", url: 'https://github.com/atul7107/hello-jenkins.git'
            }
           }
      stage("Maven Build"){
